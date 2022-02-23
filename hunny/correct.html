@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app copy.css">
+    <style>
+        body{
+            background: url( https://funart.pro/uploads/posts/2021-04/1618610733_12-funart_pro-p-oboi-fon-pastelnii-fon-bezhevii-12.jpg)
+     }
+    </style>
+</head>
+<body>
+    <ul class="menu-main">
+        <li><a href="index21-2-11.html">Поиск</a></li>
+        <li><a href="index21-2-1.html" class="current">Список</a></li>
+        <li><a href="task1.html">Путешествие</a></li>
+        <li><a href="correct.html">Покупки</a></li>
+      </ul>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("myShoppingList", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.products = ["Milk", "Bread", "Cheese","Chocolate","Why are you read this?", "It so bore", "It's boring but I had to finish the project and show at least something else"];
+            $scope.addItem = function() {
+                $scope.errortext = "";
+                if (!$scope.addMe) {return;}
+                if ($scope.products.indexOf($scope.addMe) == -1) {
+                    $scope.products.push($scope.addMe);
+                } else {
+                    $scope.errortext = "Такой элемент уже есть."
+                }
+            }
+            $scope.removeItem = function(x) {
+                $scope.errortext = ""
+                $scope.products.splice(x, 1);
+            }
+        })
+    </script>
+    
+    <div ng-app="myShoppingList" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in products">{{x}} <span ng-click="removeItem($index)">&times;</span> </li>
+        </ul>
+        <input type="text" ng-model="addMe">
+        <button ng-click="addItem()">Добавить</button>
+        <p>{{errortext}}</p>
+    </div>
+</body>
+</html>

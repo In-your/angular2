@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<form action="">
+   <p> Выбрать тему: </p>
+   <input type="radio" ng-model="info" value="paris"> Paris
+   <input type="radio" ng-model="info" value="london"> London
+   <input type="radio" ng-model="info" value="kyiv"> Kyiv
+</form>
+<div ng-switch="info">
+    <div ng-switch-when="paris">
+        <h1>Paris</h1>
+        <p>Paris (French pronunciation: ​[paʁi] (About this soundlisten)) is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres (41 square miles).[4] Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, gastronomy, science, and arts. </p>
+    </div>
+    <div ng-switch-when="london">
+        <h1>London</h1>
+        <p>
+            London is the capital and largest city of England and the United Kingdom. It stands on the River Thames in south-east England at the head of a 50-mile (80 km) estuary down to the North Sea, and has been a major settlement for two millennia.[9] The City of London, its ancient core and financial centre, was founded by the Romans as Londinium and retains boundaries close to its medieval ones.
+        </p>
+    </div>
+    <div ng-switch-when="kyiv">
+        <h1>Kyiv</h1>
+        <p>Kyiv (Ukrainian: Київ)[a] or Kiev[b] is the capital and most populous city of Ukraine. It is in north-central Ukraine along the Dnieper River. As of 1 January 2021 its population was 2,962,180[12] making Kyiv the seventh-most populous city in Europe.</p>
+    </div>
+</div>
+
+</body>
+</html>

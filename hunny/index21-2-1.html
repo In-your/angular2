@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style21-2-1.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<style>
+    body{
+        background: url( https://funart.pro/uploads/posts/2021-04/1618610733_12-funart_pro-p-oboi-fon-pastelnii-fon-bezhevii-12.jpg)
+ }
+</style>
+
+<body>
+    <ul class="menu-main">
+        <li><a href="index21-2-11.html">Поиск</a></li>
+        <li><a href="index21-2-1.html" class="current">Список</a></li>
+        <li><a href="task1.html">Путешествие</a></li>
+        <li><a href="correct.html">Покупки</a></li>
+      </ul>
+        <div ng-app="booksApp" class="center">
+           
+        <div ng-app="booksApp" class="center">
+           
+            <script type="text/ng-template" id="index21-2-1.html" >
+                <h1 align="center">Title: {{books.title}}</h1>
+                <p align="center">Author: {{books.author}}</p>
+                <p align="center">Year of publishing: {{books.year}}</p>
+                <p align="center">Amount of pages: {{books.pages}}</p>
+                <p align="center">Descriptions: {{books.descriptions}}</p>
+            </script>
+            <h1>Learn more about books!</h1>
+            <h1>I advise you to read</h1>
+            <ul > 
+                <li> <a href="#!/harry1">Harry Potter and the Sorcerer's Stone</a> </li>
+                <li> <a href="#!/harry2">Mind of the Killer</a> </li>
+                <li> <a href="#!/harry3">Hannibal </a> </li>
+                <li> <a href="#!/harry4">Silber</a> </li>
+                <li> <a href="#!/harry5">Inside the Killer</a> </li>
+            </ul>
+            <div class="books-container">
+                <div class="books-view" ng-view></div>
+            </div>
+        </div>
+<!--<p><a href="index21-2-11.html">Вернуться назад на страницу</a></p>-->
+    <script src="main21-2-1.js"></script>
+</body>
+</html>
